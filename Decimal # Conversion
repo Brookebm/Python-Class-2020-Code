@@ -1,0 +1,51 @@
+# BBM CSC119 2020
+# Converting between number bases
+
+print ("This program takes a decimal numerical number and outputs the hexadecimal, octal and binary numerical number" + "\n")
+
+# converts the number to hexadecimal
+def convert_hex(num):
+	return hex(int(num)).split('x')[-1]
+
+# converts the number to octal
+def convert_octal(num):
+	return oct(int(num)).split('o')[-1]
+
+# converts the number to binary
+def convert_binary(num):
+	return bin(int(num)).split('b')[-1]
+
+# prompts the user to enter a number
+def get_user_input():
+	while True:
+		num = input('Enter a numerical decimal number: ')
+		try:
+			if isinstance(int(num), int):
+				return num
+				break
+		except:
+			print('That is not a valid number.\n')
+			continue
+
+
+# the numerical deciminal number to be converted in the function
+number = get_user_input()
+print ("\n" + "Hexadecimal: " + (convert_hex(number)))
+print ("Octal: " + (convert_octal(number)))
+print ("Binary: " + (convert_binary(number)) + "\n")
+
+
+# The function below returns a dictionary with base names as the keys and numbers as the values
+def get_base_pairs():
+  my_dict = {"Hexadecimal":convert_hex(number), "Decimal": number,"Octal":convert_octal(number), "Binary":convert_binary(number)}
+  return my_dict
+
+
+# COMPLETE THE LOOP BELOW
+# Loop over the dictionary and print the key/value pairs
+
+#for x, y in my_dict.items():
+  #print(x + " : " + y)
+#NameError: name "my_dict" is not defined. Needs more work on own time. Temporary solution below:
+
+print (get_base_pairs())
