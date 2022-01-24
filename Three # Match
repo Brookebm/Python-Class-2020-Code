@@ -1,0 +1,19 @@
+#BBM CSC119 2020
+#Given three numbers, determine how many are equal to each other. Print 3 (if all the same), 2 (if two the same and one different) and 0(if all are different).
+
+print ("This program will ask for three numbers in numerical form, then will tell you how many numbers are equal to each other. For example: 4, 4, 3 will output 2, as in 2 numbers match.")
+print ("")
+
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter another number: "))
+num3 = int(input("Enter another number: "))
+
+if num1 == num2 == num3:
+  print("Matches: " + str(3))
+elif (num1 == num2 and num1 != num3) or (num1 == num3 and num1 != num2):
+  print("Matches: " + str(2))
+elif (num2 == num1 and num2 != num3) or (num2 == num3 and num2 != num1):
+  print("Matches: " + str(2))
+else:
+  print("\n \n")
+  print("Matches: " + str(0))
