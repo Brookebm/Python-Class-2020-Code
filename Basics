@@ -1,3 +1,34 @@
+#BBM CSC119 2020
+########
+
 #The first line learned in programming.
 print ("Hello World")
+
+#######
+
+#Dropped Pen calculation with given calculations.
+height_in_inches = 29
+height_in_meters = height_in_inches * 0.0254
+time_squared = height_in_meters / 4.9 
+seconds = time_squared **0.5 
+print ("It will take " + str(seconds) + " seconds for the pen to hit the ground.")
+
+######
+
+#Split the Bill/Tip calculation
+print ("This code helps a group of people split the bill and tip evenly:" + "\n")
+
+#variables defined here
+bill = input ('Numerical value of bill (example: $45.78): $')
+tip_percentage = input ('Desired tip percentage: ')
+total_people = input ('Number of people sharing the bill: ')
+
+#calculations here
+tip = (float(tip_percentage) / 100) * float(bill)
+print ("Total combined tip ammount is: $" + str(round(tip, 2)))
+individual_pmt = (float(bill) + float(tip)) / int(total_people)
+
+#print result here
+print ("Each person should pay $" + str(round(individual_pmt, 2)))
+
 
