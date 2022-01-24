@@ -1,0 +1,16 @@
+#BBM CSC119 2020
+#This program outputs how many seconds, minutes and hours have passed since midnight. Round any float values to 2 decimal places.
+#The program should print two numbers: the number of hours (between 0 and 23) and the number of minutes (between 0 and 1339).
+
+print ("This program asks for an amount of time of seconds in numerical form, then it calculates how many minutes and hours have passed since midnight" + "\n")
+
+#Prompt the user to input the number of seconds passed midnight:
+seconds = int(input("Seconds passed since midnight: "))
+
+if seconds < 86400 and seconds >= 0:
+  hour = seconds/3600
+  minutes = seconds/60
+  print("Minutes passed since midnight: " + str(format(minutes, ".2f")) + "\n"
+    "Hours passed since midnight: " + str(format(hour, ".2f")))
+else:
+  print("ERROR: There are 86400 seconds in 24 hours. Choose a number of seconds between 0 and 86399, so that the program will choose a hour between 0 and 23. Please try again!")
